@@ -1,6 +1,6 @@
 <h1>Article details</h1>
 <h3><%= @article.title %></h3>
 <p class="content"><%= @article.content %></h3>
-<p><%= link_to 'Edit article', edit_article_path(@article) %></p>
-<p><%= link_to 'Delete article', article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
-<p><%= link_to 'Articles list', articles_path(@article) %></p>
+<p class="btn"><%= link_to 'Delete article', article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
+<p class="btn"><%= link_to 'Edit article', edit_article_path(@article) %></p>
+<p class="btn"><%= link_to 'Articles list', articles_path(@article) %></p>

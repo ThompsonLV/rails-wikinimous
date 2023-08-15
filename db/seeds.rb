@@ -7,6 +7,8 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
 
+Article.destroy_all
+
 10.times do
-  Article.create(title: Faker::Company.name, content: Faker::Number.number(digits: 2))
+  Article.create(title: Faker::Company.name, content: Faker::Markdown.emphasis)
 end

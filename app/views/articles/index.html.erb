@@ -1,8 +1,13 @@
 <h1>Article list</h1>
 
-<p><%= link_to 'New article', new_article_path %></p>
 
-<% @articles.each do |article| %>
-  <li class="title"><%= link_to article.title, article_path(article) %></li>
-  <li class="content"><%= article.content %></li>
-<% end %>
+<div class="articles">
+  <% @articles.each do |article| %>
+    <div class="article">
+      <li class="title"><%= link_to article.title, article_path(article) %></li>
+      <li class="content"> <em><%= article.content %></em></li>
+    </div>
+  <% end %>
+</div>
+
+<p class="btn"><%= link_to 'New article', new_article_path %></p>
